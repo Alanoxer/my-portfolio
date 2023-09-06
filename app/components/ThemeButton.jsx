@@ -2,13 +2,7 @@
 import { useEffect, useState } from "react";
 
 const ThemeButton = ()=>{
-    const [theme, setTheme] = useState(()=>{
-        if(window.matchMedia("(prefers-color-scheme: dark").matches){
-            return "dark"
-        }
-
-        return "light"
-    })
+    const [theme, setTheme] = useState("dark")
 
     useEffect(()=>{
         if(theme === "dark"){
