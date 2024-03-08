@@ -18,7 +18,7 @@ const ThemeButton = ()=>{
 
     return(
         <div className="  flex justify-center items-center ">
-            <button className=" bg-slate-300 px-4 py-2 rounded hover:bg-slate-200 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
+            <button className=" bg-slate-400 border-b-4 border-l-2 border-slate-500 px-4 py-2 rounded hover:bg-slate-200 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
             onClick={handleChangeTheme}>
                 Change Theme
             </button>

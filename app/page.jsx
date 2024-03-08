@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 import React, {useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 export default function Home() {
@@ -36,27 +38,52 @@ export default function Home() {
 
   return (<>
   <div className="
-     md:w-full lg:w-1/2
-     h-auto ml-40
-     rounded-lg    ">
+    lg:mx-40
+    sm:m-0
+    w-auto
+    h-auto 
+    rounded-lg    ">
       
-    <div id="projects" className=" flex justify-center content-center w-full text-center mt-4">
+    <div id="projects" className=" flex justify-center content-center w-auto text-center mt-4">
       <button className='h-12 w-12 border-2 bg-purple-700 text-white dark:border-slate-200 border-slate-800  justify-center rounded-lg' onClick={handlePrevious}>←</button>
 
-      <img src={wordData.value} className='w-full h-full rounded-lg border-2 border-purple-700' />
+      <Image width={1500} height={1500} src={wordData.value} alt={wordData.id} className=' w-auto h-full rounded-lg border-2 border-slate-600' />
 
 
       <button className='h-12 w-12 border-2 bg-purple-700 text-white dark:border-slate-200 border-slate-800 justify-center rounded-lg' onClick={handleNext}>→</button>
       
     </div>
+    
+    {val === 0 ?
+  <div className=" grid-flow-col mt-8 ml-60 gap-8">
+      <Link href={"https://newspage-v2.vercel.app/"} 
+      className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
+      Visitar
+      </Link>
+
+      <p className=" mt-8 ml-8">
+        A news page developed
+      </p>
+  </div> 
+  :
+  <div className=" grid-flow-col mt-8 ml-16 gap-8">
+      <Link href={"https://shopest-lyart.vercel.app/products/page/0"} 
+      className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
+      Visitar
+      </Link>
+
+      <p className=" mt-8 ml-8">
+        A shopest web 
+      </p>
+  </div> 
+   }
 
 
-
-<div className=" grid-flow-col text-left content-start ml-4
+<div className=" grid-flow-col text-left content-start ml-4 -mt-24
 ">
 
     <div>
-        <h1 className=" text-3xl font-mono mt-2 mb-4">
+        <h1 className=" text-3xl font-mono mb-4">
             Technologies for this project :
         </h1>
     </div>
@@ -64,7 +91,7 @@ export default function Home() {
 
     <div>
         <h1 className=" text-3xl font-mono my-4">
-            Fronted
+            Frontend
         </h1>
 
 
@@ -251,15 +278,13 @@ export default function Home() {
         </ul>
     </div>
 
-    <div id={"me"} className='mt-24 '>
+    <div id={"me"} className='mt-20 -ml-40 '>
     <div className=" relative flex items-center justify-center overflow-hidden z-50 ">
      
-     <div className="relative mx-auto h-full px-4 pb-20 md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
+     <div className="relative  h-full px-4 pb-20 md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
          <div className="flex flex-col items-center justify-between lg:flex-row py-16">
-             <div className=" relative ">
-                 <div className=" absolute top-0 -left-48 z-0  opacity-50 ">
-                     <img src="https://placehold.co/200x100" class="w-36 z-0  h-full    object-fill fill-y text-y   "/>
-                 </div>
+             <div className=" ">
+      
                  <div className="lg:max-w-xl lg:pr-5 relative z-40">
                      <p className="flex text-sm uppercase text-g1  ">
                           
@@ -270,28 +295,88 @@ export default function Home() {
                          <span className="my-1 inline-block border-b-8 border-g4 px-4 font-bold text-g4 animate__animated animate__flash">FullStack Developer</span>
                      </h2>
                      <p className="text-base text-gray-800 dark:text-slate-300">
-                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                         accusantium doloremque it.
+                     I'm a full stack developer focused in React, Nextjs and Tailwind for the Frontend, Node JS and Express for the backend, Mysql for database SQL and MongoDB for database NoSQL
                      </p>
                      
                  </div>
                  
                 
              </div>
-             <div className="relative hidden lg:ml-32 lg:block lg:w-1/2">
-                 <svg xmlns="http://www.w3.org/2000/svg" className="my-6 mx-auto h-10 w-10 animate-bounce rounded-full bg-white p-2 lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+             <div className="relative lg:ml-32 lg:block lg:w-1/2">
+                 <svg xmlns="http://www.w3.org/2000/svg" className=" bg-purple-800 my-6 mx-auto h-10 w-10 animate-bounce rounded-full p-2 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 17l-4 4m0 0l-4-4m4 4V3"></path>
                  </svg>
-                 <div className="abg-orange-400 mx-auto w-fit overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
-                      <img src="https://placehold.co/400x400"/>
+                 <div className="abg-orange-400 mx-auto w-fit overflow-hidden rounded-[12rem] rounded-br-none rounded-tl-none  ">
+                      <Image alt="myphoto" width={600} height={600} src="/vjgsjl0zglf7ceed6qi6.jpg"/>
                  </div>
              </div>
+
          </div>
-     </div> 
-     
-    
+
+
+    <h1 className=" w-40 p-3  rounded-lg border-l-4 border-b-4 border-red-900 bg-red-700 text-white dark:text-white font-mono ">
+      Skills
+    </h1>        
+    <ul className='-ml-80 grid grid-flow-col grid-rows-6 space-y-5 mt-4 '>
+    <h1 class="pl-10 pt-2 sm:pt-5 text-blue-500 sm:pl-80   ">React <span class=" text-lg text-blue-500">80%</span></h1>
+      <li class="mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-gray-600 sm:bg-blue-500 absolute" style={{width:"80%"}} ></div>
+      </li>       
+
+      <h1 class="pl-10 pt-2 sm:pt-5 text-blue-600 sm:pl-80   ">CSS <span class=" text-lg text-blue-600">80%</span></h1>
+      <ul class="mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-red-500 sm:bg-blue-600 absolute" style={{width:"80%"}} ></div>
+      </ul>
+
+      <h1 class="pl-10 pt-2 sm:pt-5 text-yellow-500 sm:pl-80   ">Javascript <span class=" text-lg text-yellow-500">80%</span></h1>
+      <li class="mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-green-500 sm:bg-yellow-500 absolute" style={{width:"80%"}} ></div>
+      </li>
+
+      <h1 class=" pl-10 pt-2 sm:pt-5 text-slate-700 dark:text-white sm:pl-80   ">Next JS <span class=" text-lg text-White">90%</span></h1>
+      <li class="mb-10 mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-indigo-500 sm:bg-gray-600 absolute" style={{width:"80%"}} ></div>
+      </li>
+
+      <h1 class=" pl-10 pt-2 sm:pt-5 text-indigo-500 sm:pl-80   ">Tailwind <span class=" text-lg text-indigo-500">90%</span></h1>
+      <li class="mb-10 mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-indigo-500 sm:bg-indigo-500 absolute" style={{width:"80%"}} ></div>
+      </li>
+
+      <h1 class=" pl-10 pt-2 sm:pt-5 text-green-600 sm:pl-80   ">Node JS <span class=" text-lg text-green-600">90%</span></h1>
+      <li class="mb-10 mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-indigo-500 sm:bg-green-600 absolute" style={{width:"80%"}} ></div>
+      </li>
+
+      <h1 class=" pl-10 pt-2 sm:pt-5 text-green-500 sm:pl-80   ">Express <span class="text-lg text-green-500">80%</span></h1>
+      <li class="mb-10 mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-indigo-500 sm:bg-green-500 absolute" style={{width:"80%"}} ></div>
+      </li>
+
+      <h1 class=" pl-10 pt-2 sm:pt-5 text-blue-400 sm:pl-80   ">MySQL <span class=" text-lg text-blue-400">90%</span></h1>
+      <li class="mb-10 mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-indigo-500 sm:bg-blue-400 absolute" style={{width:"90%"}} ></div>
+      </li>
       
-     
+      <h1 class=" pl-10 pt-2 sm:pt-5 text-green-700 sm:pl-80   ">MongoDB <span class=" text-lg text-green-700">90%</span></h1>
+      <li class="mb-10 mt-2 ml-10 sm:ml-80 h-4 relative w-60 rounded-full overflow-hidden">
+          <div class=" w-full h-full bg-gray-200 absolute "></div>
+          <div class=" h-full bg-indigo-500 sm:bg-green-700 absolute" style={{width:"90%"}} ></div>
+      </li>
+
+      
+    </ul>
+
+     </div> 
+      
  </div>
     </div>
 
@@ -299,29 +384,8 @@ export default function Home() {
 
 
   </div>
-  {val === 0 ?
-  <div className=" grid-flow-col mt-8 ml-16 gap-8">
-      <Link href={"https://newspage-v2.vercel.app/"} 
-      className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
-      Visitar
-      </Link>
+  
 
-      <p className=" mt-8 ml-8">
-        A news page developed
-      </p>
-  </div> 
-  :
-  <div className=" grid-flow-col mt-8 ml-16 gap-8">
-      <Link href={"https://shopest-lyart.vercel.app/products/page/0"} 
-      className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
-      Visitar
-      </Link>
-
-      <p className=" mt-8 ml-8">
-        A shopest web 
-      </p>
-  </div> 
-   }
 </>
 
   );

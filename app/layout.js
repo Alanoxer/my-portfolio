@@ -1,4 +1,4 @@
-import DashBoard from "./components/DashBoard";
+import Header from "./components/Header";
 
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -14,7 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <DashBoard>{children}</DashBoard>
+        <Header />
+
+        <main
+          className="flex flex-row bg-gray-200 text-gray-800
+          dark:bg-slate-900 dark:text-white text-center text-2xl font-bold shadow-md pt-8"
+        >
+          {children}
+        </main>
       </body>
     </html>
   );
