@@ -45,41 +45,43 @@ export default function Home() {
     rounded-lg    ">
       
     <div id="projects" className=" flex justify-center content-center w-auto text-center mt-4">
-      <button className='h-12 w-12 border-2 bg-purple-700 text-white dark:border-slate-200 border-slate-800  justify-center rounded-lg' onClick={handlePrevious}>←</button>
+      <button className=' relative top-80 left-12 h-12 w-12 pr-2 pl-2 border-2 bg-purple-700 text-white dark:border-slate-200 border-slate-800  justify-center rounded-lg' onClick={handlePrevious}>←</button>
 
       <Image width={1500} height={1500} src={wordData.value} alt={wordData.id} className=' w-auto h-full rounded-lg border-2 border-slate-600' />
 
 
-      <button className='h-12 w-12 border-2 bg-purple-700 text-white dark:border-slate-200 border-slate-800 justify-center rounded-lg' onClick={handleNext}>→</button>
+      <button className='relative top-80 right-12 h-12 w-12 pr-2 pl-2 border-2 bg-purple-700 text-white dark:border-slate-200 border-slate-800 justify-center rounded-lg' onClick={handleNext}>→</button>
       
     </div>
     
     {val === 0 ?
-  <div className=" grid-flow-col mt-8 ml-60 gap-8">
+  <div className=" absolute w-1/2 mt-8 ml-80 right-56">
       <Link href={"https://newspage-v2.vercel.app/"} 
       className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
       Visitar
       </Link>
 
       <p className=" mt-8 ml-8">
-        A news page developed
+        A news page made with React Js and NextJS API, API CALL,
+        Register and Login, Authentication with AuthO, Mongo DB Database
       </p>
   </div> 
   :
-  <div className=" grid-flow-col mt-8 ml-16 gap-8">
+  <div className=" absolute w-1/2 mt-8 ml-80 right-56 ">
       <Link href={"https://shopest-lyart.vercel.app/products/page/0"} 
       className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
       Visitar
       </Link>
 
       <p className=" mt-8 ml-8">
-        A shopest web 
+        A shopest web made with React Js and NextJS API, Styling with Tailwind CSS.
+        Backend with Node JS and CRUD in MySQL.
       </p>
   </div> 
    }
 
 
-<div className=" grid-flow-col text-left content-start ml-4 -mt-24
+<div className=" grid-flow-col text-left content-start ml-4 mt-8
 ">
 
     <div>
