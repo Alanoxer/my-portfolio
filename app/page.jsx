@@ -10,6 +10,7 @@ export default function Home() {
   const imgs=[
     {id:0,value:"/Opera Instantánea_2024-03-02_113323_newspage-v2.vercel.app.png"},
     {id:1,value:"/Opera Instantánea_2024-03-02_093436_shopest-lyart.vercel.app.png"},
+    {id:2,value:"/Screenshot_20240630-201245.png"}
   ]
 
   const [wordData, setWordData]= useState(imgs[0])
@@ -38,19 +39,34 @@ export default function Home() {
 
   return (<>
   <div className="
+    m-auto
     lg:mx-40
     sm:m-0
     w-auto
     h-auto 
     rounded-lg    ">
+
+{/* relative top-80 right-12 */}
       
     <div id="projects" className=" flex justify-center content-center w-auto text-center mt-4">
-      <button className=' relative top-80 left-12 h-12 w-12 pr-2 pl-2 border-2 bg-purple-700 text-white dark:border-slate-200 border-slate-800  justify-center rounded-lg' onClick={handlePrevious}>←</button>
+        <button type="button" onClick={handlePrevious}
+        class="flex relative top-80 left-16 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-purple-700  group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <span class="hidden">Previous</span>
+            </span>
+        </button>
 
-      <Image width={1500} height={1500} src={wordData.value} alt={wordData.id} className=' w-auto h-full rounded-lg border-2 border-slate-600' />
+      <Image width={1300} height={800} src={wordData.value} alt={wordData.id} className=' w-auto h-1/4 rounded-lg border-2 border-slate-600' />
 
 
-      <button className='relative top-80 right-12 h-12 w-12 pr-2 pl-2 border-2 bg-purple-700 text-white dark:border-slate-200 border-slate-800 justify-center rounded-lg' onClick={handleNext}>→</button>
+        <button type="button" onClick={handleNext}
+        class="flex relative top-80 right-16 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-purple-700  group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="hidden">Next</span>
+            </span>
+        </button>
       
     </div>
     
@@ -66,7 +82,7 @@ export default function Home() {
         Register and Login, Authentication with AuthO, Mongo DB Database
       </p>
   </div> 
-  :
+  : null || val === 1 ?
   <div className=" absolute w-1/2 mt-8 ml-80 right-56 ">
       <Link href={"https://shopest-lyart.vercel.app/products/page/0"} 
       className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
@@ -78,7 +94,19 @@ export default function Home() {
         Backend with Node JS and CRUD in MySQL.
       </p>
   </div> 
-   }
+  : null || val === 2 ?
+  <div className=" absolute w-1/2 mt-8 ml-80 right-56 ">
+      <Link href={"https://github.com/Alanoxer/FinanceApp-ReactNative/tree/main"} 
+      className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
+      The app is still being tested by Play Store
+      </Link>
+
+      <p className=" mt-8 ml-8">
+        A Finance App made with React Native and Expo.
+      </p>
+  </div> 
+  : null
+ }
 
 
 <div className=" grid-flow-col text-left content-start ml-4 mt-8
@@ -89,6 +117,13 @@ export default function Home() {
             Technologies for this project :
         </h1>
     </div>
+
+    {val === 2 ?
+    <div>
+      <p>
+        React Native
+      </p>
+    </div> : null }
 
 
     <div>
