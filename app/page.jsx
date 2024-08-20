@@ -50,7 +50,7 @@ export default function Home() {
       
     <div id="projects" className=" flex justify-center content-center w-auto text-center mt-4">
         <button type="button" onClick={handlePrevious}
-        class="flex relative top-80 left-16 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+        class="flex relative top-80 left-16 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none sm:top-40 lg:top-80" data-carousel-prev>
             <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-purple-700  group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 <span class="hidden">Previous</span>
@@ -61,7 +61,7 @@ export default function Home() {
 
 
         <button type="button" onClick={handleNext}
-        class="flex relative top-80 right-16 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+        class="flex relative top-80 right-16 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none sm:top-40 lg:top-80" data-carousel-next>
             <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-purple-700  group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 <span class="hidden">Next</span>
@@ -71,7 +71,7 @@ export default function Home() {
     </div>
     
     {val === 0 ?
-  <div className=" absolute w-1/2 mt-8 ml-80 right-56">
+  <div className=" absolute w-1/3 mt-8 ml-80 right-40 md:ml-20 sm:w-1/2   ">
       <Link href={"https://newspage-v2.vercel.app/"} 
       className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
       Visitar
@@ -83,7 +83,7 @@ export default function Home() {
       </p>
   </div> 
   : null || val === 1 ?
-  <div className=" absolute w-1/2 mt-8 ml-80 right-56 ">
+  <div className=" absolute w-1/3 mt-8 ml-80 right-56 md:ml-20 sm:w-1/2  ">
       <Link href={"https://shopest-lyart.vercel.app/products/page/0"} 
       className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
       Visitar
@@ -95,7 +95,7 @@ export default function Home() {
       </p>
   </div> 
   : null || val === 2 ?
-  <div className=" absolute w-1/2 mt-8 ml-80 right-56 ">
+  <div className=" absolute w-1/3 mt-8 ml-80 right-56 md:ml-4 sm:w-1/2 ">
       <Link href={"https://github.com/Alanoxer/FinanceApp-ReactNative/tree/main"} 
       className=" p-3 ml-8 rounded-lg border-l-4 border-b-4 border-purple-900 bg-purple-700 text-white dark:text-white font-mono ">
       The app is still being tested by Play Store
@@ -109,7 +109,7 @@ export default function Home() {
  }
 
 
-<div className=" grid-flow-col text-left content-start ml-4 mt-8
+<div className=" grid-flow-col text-left content-start ml-4 mt-8 sm:mt-80 xl:mt-10 xl:mr-80 
 ">
 
     <div>

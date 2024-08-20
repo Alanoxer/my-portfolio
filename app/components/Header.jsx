@@ -27,7 +27,7 @@ export default function Header(){
         <span className="text-purple-600">My</span> Projects </span>
       </Link>
 
-      <Link href={"#me"} className=" mt-8 mb-4 w-full border-b-4 border text-center border-slate-400 dark:border-slate-800  ">
+      <Link href={"#me"} className=" mt-8 mb-4 w-20 border-b-4 border text-center border-slate-400 dark:border-slate-800  ">
         
       <span className="font-mono text-xl font-bold tracking-widest"> 
       <span  className="text-purple-600">About</span> Me </span>
