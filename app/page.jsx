@@ -12,16 +12,16 @@ export default function Component() {
 
   const projects = [
     {
-      image: "/Opera Instantánea_2024-03-02_113323_newspage-v2.vercel.app.png",
-      title: "News Page",
-      description: " A news page made with React Js and NextJS API, API CALL,Register and Login, Authentication with AuthO, Mongo DB Database",
-      technologies: ["HTML","CSS",,"Javascript","React","Next JS","Tailwind.css", "Node.js","express.js", "MongoDB","Amazon Web Services","Vercel"]
+      image: "/Opera Instantánea_2024-09-25_041115_localhost.png",
+      title: "Shop Page",
+      description: "He desarrollado una web con Next.js, que está desplegada en Vercel. La aplicación cuenta con una funcionalidad CRUD (Create, Read, Update, Delete) completa, con MySQL como base de datos, alojada en Amazon Web Services (AWS). El diseño es responsive y utiliza Tailwind CSS para ofrecer una interfaz moderna y fácil de usar. Además, la aplicación incluye funciones para crear cuentas y autenticarse mediante credenciales, así como opciones de inicio de sesión social a través de Facebook y Google, implementadas con NextAuth.",
+      technologies: ["HTML","CSS","Javascript","React","Next JS","Tailwind.css", "Node.js","Express.js", "MySQL", "Amazon Web Services","Vercel","Next Auth"]
     },
     {
-      image: "/Opera Instantánea_2024-03-02_093436_shopest-lyart.vercel.app.png",
-      title: "Shop Page",
-      description: "A shopest web made with React Js and NextJS API, Styling with Tailwind CSS. Backend with Node JS and CRUD in MySQL.",
-      technologies: ["HTML","CSS","Javascript","React","Next JS","Tailwind.css", "Node.js","Express.js", "MySQL", "Amazon Web Services","Vercel"]
+      image: "/Opera Instantánea_2024-03-02_113323_newspage-v2.vercel.app.png",
+      title: "News Page",
+      description: " He desarrollado un sitio web de noticias utilizando la API de noticias integrada con Next.js para el renderizado del lado del servidor y el contenido dinámico. El diseño se ha implementado con Tailwind CSS, lo que proporciona una interfaz de usuario moderna y responsive. La aplicación cuenta con todas las funcionalidades CRUD (crear, leer, actualizar y eliminar) con MongoDB como base de datos para el almacenamiento de datos. Además, he utilizado NextAuth para la autenticación segura de usuarios, lo que permite a los usuarios crear y gestionar sus cuentas sin problemas.",
+      technologies: ["HTML","CSS","Javascript","React","Next JS","Tailwind.css", "Node.js","express.js", "MongoDB","Amazon Web Services","Vercel","Next Auth"]
     },
     {
       image: "/Screenshot_20240630-201245.png",
@@ -60,14 +60,14 @@ export default function Component() {
                 />
                 <Button
                   variant="ghost"
-                  className="absolute left-2 top-1/2 -translate-y-1/2"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-300" 
                   onClick={() => setCurrentProject((prev) => (prev === 0 ? projects.length - 1 : prev - 1))}
                 >
                   ←
                 </Button>
                 <Button
                   variant="ghost"
-                  className="absolute right-2 top-1/2 -translate-y-1/2"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-300"
                   onClick={() => setCurrentProject((prev) => (prev === projects.length - 1 ? 0 : prev + 1))}
                 >
                   →
@@ -92,7 +92,7 @@ export default function Component() {
         {/* About Me */}
 
         <div id='me' className="flex flex-col items-center justify-between lg:flex-row py-16 ml-8">
-             <div className=" ">
+             <div >
       
                  <div className="lg:max-w-xl lg:pr-5 relative z-40">
                      <p className="flex text-sm uppercase text-g1 mb-40  ">
