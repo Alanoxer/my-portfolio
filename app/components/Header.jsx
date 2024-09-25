@@ -37,6 +37,7 @@ export default function Header(){
       <ThemeButton/>
       
       <h1 className=" ml-40 font-bold">contacts:</h1>
+      <h2>Email: alancompay780@gmail.com</h2>
 
       <Link href="https://www.linkedin.com/in/alan-compay-30412a280/" className="  mr-6 text-neutral-600 dark:text-neutral-200 mb-1">
         <svg
