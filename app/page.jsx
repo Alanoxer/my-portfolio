@@ -1,11 +1,10 @@
 
 'use client'
-
 import { useState } from 'react'
-import { Button } from "./components/ui/button"
+import { Button, buttonVariants } from "./components/ui/button"
 import { Card, CardContent } from "./components/ui/card"
-
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Component() {
   const [currentProject, setCurrentProject] = useState(0)
@@ -15,19 +14,22 @@ export default function Component() {
       image: "/Opera Instantánea_2024-09-25_041115_localhost.png",
       title: "Shop Page",
       description: "He desarrollado una web con Next.js, que está desplegada en Vercel. La aplicación cuenta con una funcionalidad CRUD (Create, Read, Update, Delete) completa, con MySQL como base de datos, alojada en Amazon Web Services (AWS). El diseño es responsive y utiliza Tailwind CSS para ofrecer una interfaz moderna y fácil de usar. Además, la aplicación incluye funciones para crear cuentas y autenticarse mediante credenciales, así como opciones de inicio de sesión social a través de Facebook y Google, implementadas con NextAuth.",
-      technologies: ["HTML","CSS","Javascript","React","Next JS","Tailwind.css", "Node.js","Express.js", "MySQL", "Amazon Web Services","Vercel","Next Auth"]
+      technologies: ["HTML","CSS","Javascript","React","Next JS","Tailwind.css", "Node.js","Express.js", "MySQL", "Amazon Web Services","Vercel","Next Auth"],
+      link: "https://shopest-lyart.vercel.app/"
     },
     {
-      image: "/Opera Instantánea_2024-03-02_113323_newspage-v2.vercel.app.png",
+      image: "/Opera Instantánea_2024-07-07_195447_newspage-v2.vercel.app.png",
       title: "News Page",
       description: " He desarrollado un sitio web de noticias utilizando la API de noticias integrada con Next.js para el renderizado del lado del servidor y el contenido dinámico. El diseño se ha implementado con Tailwind CSS, lo que proporciona una interfaz de usuario moderna y responsive. La aplicación cuenta con todas las funcionalidades CRUD (crear, leer, actualizar y eliminar) con MongoDB como base de datos para el almacenamiento de datos. Además, he utilizado NextAuth para la autenticación segura de usuarios, lo que permite a los usuarios crear y gestionar sus cuentas sin problemas.",
-      technologies: ["HTML","CSS","Javascript","React","Next JS","Tailwind.css", "Node.js","express.js", "MongoDB","Amazon Web Services","Vercel","Next Auth"]
+      technologies: ["HTML","CSS","Javascript","React","Next JS","Tailwind.css", "Node.js","express.js", "MongoDB","Amazon Web Services","Vercel","Next Auth"],
+      link : "https://newspage-v2.vercel.app/"
     },
     {
       image: "/Screenshot_20240630-201245.png",
       title: "Finance App",
-      description: "For Project 3, I developed a mobile app with cross-platform compatibility.",
-      technologies: ["React Native", "Expo", "Tailwind.css"]
+      description: "Aplicación de Finanzas hecha con React Native, Expo. IOS y Android.",
+      technologies: ["React Native", "Expo", "Tailwind.css"],
+      link:"app siendo testeada por Google"
     }
   ]
 
@@ -50,6 +52,7 @@ export default function Component() {
         {/* Projects Carousel */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6">My Projects</h2>
+
           <Card className="overflow-hidden">
             <CardContent className="p-0">
               <div className="relative">
@@ -74,7 +77,17 @@ export default function Component() {
                 </Button>
               </div>
               <div className="p-6">
+                <div className='flex flex-row space-x-12 justify-center'>
                 <h3 className="text-2xl font-semibold mb-2">{projects[currentProject].title}</h3>
+                { projects[currentProject].title != "Finance App" 
+                ?
+                  <div className=' mb-4 -mt-2 bg-purple-600 p-2 border-l-2 border-b-2 border-slate-800 dark:border-slate-300 rounded-lg text-center  '>
+                  <Link href={projects[currentProject].link} className=' text-slate-300  font-bold text-lg'>Visitar página web</Link>
+                  </div>
+                : 
+                  <Button>App siendo probada por PlayStore, aún no lanzada.</Button>
+                }
+                </div>
                 <p className="text-muted-foreground mb-4">{projects[currentProject].description}</p>
                 <div className="flex flex-wrap gap-2">
                   {projects[currentProject].technologies.map((tech) => (

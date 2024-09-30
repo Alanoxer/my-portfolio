@@ -21,13 +21,13 @@ export default function Header(){
 
     <div class="flex space-x-10 justify-center items-center">
 
-      <Link  href={"#projects"} className="  border-b-4 border text-center border-slate-400 dark:border-slate-800  ">
+      <Link  href={"#projects"} className=" p-2 border-b-4 border-l-2 border text-center border-slate-400 dark:border-slate-800  ">
         
         <span className="font-mono text-xl font-bold tracking-widest"> 
         <span className="text-purple-600">My</span> Projects </span>
       </Link>
 
-      <Link href={"#me"} className=" mt-8 mb-4 w-20 border-b-4 border text-center border-slate-400 dark:border-slate-800  ">
+      <Link href={"#me"} className=" p-1 mt-8 mb-4 w-20 border border-b-4 border-l-2 text-center border-slate-400 dark:border-slate-800  ">
         
       <span className="font-mono text-xl font-bold tracking-widest"> 
       <span  className="text-purple-600">About</span> Me </span>
